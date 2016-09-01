@@ -36,35 +36,6 @@
 
 		<form action="<?php bloginfo('url'); ?>/" method="get">
 		<div>
-		<select name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-			<option value="#">Show by topic</option>
-		<?php $args = array(
-				    'number'             => 0,
-					'show_count'         => 0,
-				    'order'              => 'ASC',
-				    'exclude'            => '53'
-				);
-		dropdown_tag_cloud($args); 
-		?>
-		</select>
-		<noscript><div><input type="submit" value="View" /></div></noscript>
-		</div>
-		</form>
-
-		<form action="<?php bloginfo('url'); ?>/" method="get">
-		<div>
-
-		<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-  			<option value=""><?php echo esc_attr( __( 'Show by month' ) ); ?></option> 
-  <?php wp_get_archives( 'type=monthly&format=option&limit=12&show_post_count=0' ); ?>
-		</select>
-
-		<noscript><div><input type="submit" value="View" /></div></noscript>
-		</div>
-		</form>
-
-		<form action="<?php bloginfo('url'); ?>/" method="get">
-		<div>
 			<?php custom_taxonomy_dropdown('region_category', 'date', 'ASC', '12', 'region_category', 'Show by region'); ?>
 		<noscript><div><input type="submit" value="View" /></div></noscript>
 		</div></form>
