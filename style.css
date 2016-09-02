@@ -196,7 +196,8 @@ em { font-style: italic; }
 	letter-spacing: 1px;
 	font-weight: 100;
 	color: #72726f;	
-	text-shadow: 0 1px 0 rgba(255, 255, 255, .9);	
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+	min-height: 15px;
 }
 .post .wp-caption-text,
 .post .wp-caption-text.gallery-caption,

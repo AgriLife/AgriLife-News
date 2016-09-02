@@ -46,7 +46,7 @@ get_header(); ?>
 				
 	<section id="content" role="main" class="two-of-3 column">
 	<div class="spotlight-section">	
-		<h1 class="section-title">Spotlight Stories</h1>			
+		<div class="section-title"></div>			
 		
 		<?php $my_query = new WP_Query( 
 			array(
@@ -80,7 +80,7 @@ get_header(); ?>
 	</div>
 	
 	<div class="recent-stories clearfix">
-		<h1 class="section-title">Recent Stories</h1>
+		<div class="section-title"></div>
 		
 		<div class="recent-column-first one-of-2">
 			
