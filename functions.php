@@ -509,6 +509,17 @@ update_user_meta( $user_id, 'phone', $_POST['phone'] );
 add_filter( 'cmb_meta_boxes', 'for_media_metaboxes' );
 
 /**
+ * Add content fragment for Subscribe2 email templates
+ */
+function subscribe2_credits_keyword($string) {
+	global $post;
+	$meta = get_post_meta($post->ID);
+
+	return str_replace('{CREDITS}', $meta['cmb_media_info'][0], $string);
+}
+add_filter('s2_custom_keywords', 'subscribe2_credits_keyword');
+
+/**
  * Define the metabox and field configurations.
  *
  * @param  array $meta_boxes
