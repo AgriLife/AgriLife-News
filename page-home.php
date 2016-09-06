@@ -45,8 +45,7 @@ get_header(); ?>
 <div class="content-wrap">
 				
 	<section id="content" role="main" class="two-of-3 column">
-	<div class="spotlight-section">	
-		<div class="section-title"></div>			
+	<div class="spotlight-section">		
 		
 		<?php $my_query = new WP_Query( 
 			array(
