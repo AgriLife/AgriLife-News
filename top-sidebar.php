@@ -36,12 +36,6 @@
 
 		<form action="<?php bloginfo('url'); ?>/" method="get">
 		<div>
-			<?php custom_taxonomy_dropdown('region_category', 'date', 'ASC', '12', 'region_category', 'Show by region'); ?>
-		<noscript><div><input type="submit" value="View" /></div></noscript>
-		</div></form>
-
-		<form action="<?php bloginfo('url'); ?>/" method="get">
-		<div>
 			<?php custom_taxonomy_dropdown('agency_category', 'date', 'ASC', '5', 'agency_category', 'Show by agency'); ?>
 			
 		<noscript><div><input type="submit" value="View" /></div></noscript>
