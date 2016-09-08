@@ -26,8 +26,7 @@
 			    'hide_empty'         => 1,
 			    'exclude'            => '60,1,3,46,47,48,49,50,51,5,8,11,16,25,27,28,29,30,31,32,33,41,42,44,342,79,80,94,6,116,121,123,128,26,96,99,100,101,102,111',
 			    'echo'               => 0 );
-			$select = wp_dropdown_categories($args);
-			$select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
+			$select = wp_list_categories($args);
 			echo $select;
 		?>
 		<noscript><div><input type="submit" value="View" /></div></noscript>

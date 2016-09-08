@@ -138,7 +138,7 @@ em { font-style: italic; }
 }
 .site-title {
 	font-size: 2em; /* 32px / 16px */		
-	padding: 7% 0 2%;								
+	padding: 7% 0 1.5%;								
 }
 .site-title a {
 	display: block;	
@@ -651,6 +651,18 @@ h2.post-author-title {
 	padding-bottom: 1.2em;
 	border-top: none;
 	padding-top: 0;
+}
+.sort-drops .categories ul {
+	padding-top: 8px;
+	border-top: 1px solid rgb(102, 102, 102);
+}
+.sort-drops .categories .cat-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	padding-right: 1%;
+	min-width: 108px;
+	white-space: nowrap;
 }
 .widget select {
 	text-overflow: ellipsis;
