@@ -90,4 +90,19 @@
 	<div class="wrap clearfix">
 	<header>
 		<h1 class="site-title one-of-3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>AgriLife Today</span><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" alt="AgriLife Today Logo" title="AgriLife Today Logo" /></a></h1>
+		<nav id="primary"><a class="home" href="<?php echo site_url(); ?>">Home</a><?php 
+			// Get the ID of a given category
+			$categories = array( 'farm-ranch', 'lawn-garden', 'life-health', 'environment', 'business', 'science-and-technology' );
+			foreach($categories as $cat){
+				$id = get_category_by_slug( $cat );
+				$link = get_category_link( $id );
+				$name = get_category( $id )->name;
+				echo sprintf( '<a class="%s" href="%s">%s</a>',
+					$cat,
+					$link,
+					$name
+				);
+			}
+			?>
+		</nav>
 	</header>

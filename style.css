@@ -812,6 +812,63 @@ a.rss:hover {
 	.drop-nav-list {
 		float: right;
 	}
+	nav#primary {
+		width: 998px;
+		margin-bottom: 1.5%;
+		white-space: nowrap;
+		background: #D1D1C6;
+		padding: 1px;
+	}
+	nav#primary a {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 36px;
+		height: 34px;
+		padding: 0;
+		margin-left: 1px;
+		white-space: nowrap;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+		transition: box-shadow .1s linear;
+	}
+	nav#primary a:hover {
+		box-shadow: 0 3px 0 #D1D1C6 inset, 0 -3px 0 #D1D1C6 inset;
+	}
+	nav#primary a:first-child {
+		margin-left: 0;
+	}
+	nav#primary a.home {
+		background: #500000 url(images/home-white.png) no-repeat 50% 9px;
+		width: 46px;
+		padding: 0;
+		text-indent: 132px;
+		overflow: hidden;
+	}
+	nav#primary a.farm-ranch {
+		width: 153px;
+		background-color: #A3756F;
+	}
+	nav#primary a.lawn-garden {
+		width: 160px;
+		background-color: #9B9E72;
+	}
+	nav#primary a.life-health {
+		width: 143px;
+		background-color: #9C83A1;
+	}
+	nav#primary a.environment {
+		width: 142px;
+		background-color: #6E9F7A;
+	}
+	nav#primary a.business {
+		width: 188px;
+		background-color: #7281A6;
+	}
+	nav#primary a.science-and-technology {
+		width: 160px;
+		background-color: #89A7B2;
+	}
 	.top-agency.agrilife {
 		background: #e1e1d7 url('images/texture.png');
 		float: right;
