@@ -798,6 +798,9 @@ a.rss:hover {
 .widget li.social-media-item {
 	margin-bottom: 0;
 }
+nav#primary {
+	display: none;
+}
 @media all and (min-width: 42em) {
 	
 	body {
@@ -825,6 +828,7 @@ a.rss:hover {
 		float: right;
 	}
 	nav#primary {
+		display: block;
 		width: 998px;
 		margin-bottom: 1.5%;
 		white-space: nowrap;
