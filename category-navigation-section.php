@@ -20,7 +20,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-farm-ranch one-of-3 first clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-farm-ranch"><a href="<?php echo esc_url( $farm_ranch_cat_link ); ?>">Farm &amp; Ranch <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-farm-ranch"><a href="<?php echo esc_url( $farm_ranch_cat_link ); ?>">Farm &amp; Ranch</a></h1>
 			</header>
 		<?php cat_loop('farm-ranch') ?>				
 		</div><!-- .end mb-inner -->	
@@ -29,7 +29,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-lawn-garden one-of-3 second clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-lawn-garden"><a href="<?php echo esc_url( $lawn_garden_cat_link ); ?>">Lawn &amp; Garden <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-lawn-garden"><a href="<?php echo esc_url( $lawn_garden_cat_link ); ?>">Lawn &amp; Garden</a></h1>
 			</header>
 		<?php cat_loop('lawn-garden') ?>
 		</div><!-- .end mb-inner -->			
@@ -38,7 +38,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-life-health one-of-3 third clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-life-health"><a href="<?php echo esc_url( $life_health_cat_link ); ?>">Life &amp; Health <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-life-health"><a href="<?php echo esc_url( $life_health_cat_link ); ?>">Life &amp; Health</a></h1>
 			</header>
 		<?php cat_loop('life-health') ?>			
 		</div><!-- .end mb-inner -->
@@ -47,7 +47,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-environment one-of-3 fourth clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-environment"><a href="<?php echo esc_url( $environment_cat_link ); ?>">Environment <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-environment"><a href="<?php echo esc_url( $environment_cat_link ); ?>">Environment</a></h1>
 			</header>
 		<?php cat_loop('environment') ?>
 		</div><!-- .end mb-inner -->			
@@ -56,7 +56,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-business one-of-3 fifth clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-business"><a href="<?php echo esc_url( $business_cat_link ); ?>">Business <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-business"><a href="<?php echo esc_url( $business_cat_link ); ?>">Business</a></h1>
 			</header>
 		<?php cat_loop('business') ?>		
 		</div><!-- .end mb-inner -->	
@@ -65,7 +65,7 @@ $science_tech_cat_link = get_category_link( $science_tech_cat_id );
 		<article class="media-box cat-nav cat-science-technology one-of-3 last clearfix">
 		<div class="mb-inner cat-nav-inner">				
 			<header class="mb-head cat-nav-head">
-				<h1 class="cat-nm cat-nm-science-technology"><a href="<?php echo esc_url( $science_tech_cat_link ); ?>">Science &amp; Tech <span class="button cat-all-button">See All</span></a></h1>
+				<h1 class="cat-nm cat-nm-science-technology"><a href="<?php echo esc_url( $science_tech_cat_link ); ?>">Science &amp; Tech</a></h1>
 			</header>
 		<?php cat_loop('science-and-technology') ?>		
 		</div><!-- .end mb-inner -->	
