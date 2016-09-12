@@ -801,6 +801,11 @@ a.rss:hover {
 nav#primary {
 	display: none;
 }
+@media all and (min-width: 42em) and (max-width: 712px){
+	nav#primary {
+		margin-top: 8px;
+	}
+}
 @media all and (min-width: 42em) {
 	
 	body {
@@ -829,61 +834,66 @@ nav#primary {
 	}
 	nav#primary {
 		display: block;
-		width: 998px;
 		margin-bottom: 1.5%;
-		white-space: nowrap;
-		background: #D1D1C6;
-		padding: 1px;
 	}
 	nav#primary a {
 		display: inline-block;
 		vertical-align: top;
 		line-height: 36px;
 		height: 34px;
-		padding: 0;
-		margin-left: 1px;
-		white-space: nowrap;
 		text-align: center;
+		text-indent: -1px;
+		white-space: nowrap;
 		color: #fff;
 		text-decoration: none;
+		box-shadow: -1px 1px 0 #D1D1C6 inset, 0 -1px #D1D1C6 inset;
 		transition: box-shadow .1s linear;
 	}
 	nav#primary a:hover {
-		box-shadow: 0 3px 0 #D1D1C6 inset, 0 -3px 0 #D1D1C6 inset;
-	}
-	nav#primary a:first-child {
-		margin-left: 0;
+		box-shadow: -1px 4px 0 #D1D1C6 inset, 0 -4px #D1D1C6 inset;
 	}
 	nav#primary a.home {
-		background: #500000 url(images/home-white.png) no-repeat 50% 9px;
-		width: 46px;
+		width: 4.8%;
+		min-width: 36px;
 		padding: 0;
 		text-indent: 132px;
 		overflow: hidden;
+		background: #500000 url(images/home-white.png) no-repeat 50% 9px;
+		box-shadow: -1px 1px 0 #D1D1C6 inset, 1px -1px #D1D1C6 inset;
+	}
+	nav#primary a.home:hover {
+		box-shadow: -1px 4px 0 #D1D1C6 inset, 1px -4px #D1D1C6 inset;
 	}
 	nav#primary a.farm-ranch {
-		width: 153px;
+		width: 15.4%;
+		min-width: 120px;
 		background-color: #A3756F;
 	}
 	nav#primary a.lawn-garden {
-		width: 160px;
+		width: 16.1%;
+		min-width: 128px;
 		background-color: #9B9E72;
 	}
 	nav#primary a.life-health {
-		width: 143px;
+		width: 14.4%;
+		min-width: 109px;
 		background-color: #9C83A1;
 	}
 	nav#primary a.environment {
-		width: 142px;
+		width: 14.3%;
+		min-width: 105px;
 		background-color: #6E9F7A;
 	}
 	nav#primary a.business {
-		width: 188px;
+		width: 18.9%;
+		min-width: 157px;
 		background-color: #7281A6;
 	}
 	nav#primary a.science-and-technology {
-		width: 160px;
+		width: 16.1%;
+		min-width: 128px;
 		background-color: #89A7B2;
+		/*border-right-width: 1px;*/
 	}
 	.top-agency.agrilife {
 		background: #e1e1d7 url('images/texture.png');
