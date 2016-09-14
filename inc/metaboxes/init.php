@@ -85,6 +85,12 @@ class cmb_Meta_Box {
 
 		add_action( 'admin_menu', array( &$this, 'add' ) );
 		add_action( 'save_post', array( &$this, 'save' ) );
+		// Modified by Zach W to work with Subscribe2 plugin's automated email publishing.
+		// Cause: class-s2-core.php:1673, add_action("{$status}_to_publish", array(&$this, 'publish'));
+		$statuses = array('new', 'draft', 'auto-draft', 'pending', 'private', 'future');
+		foreach ( $statuses as $status ) {
+			add_action( $status . '_to_publish', array( &$this, 'save' ), 1 );
+		}
 
 		add_filter( 'cmb_show_on', array( &$this, 'add_for_id' ), 10, 2 );
 		add_filter( 'cmb_show_on', array( &$this, 'add_for_page_template' ), 10, 2 );
@@ -386,8 +392,9 @@ class cmb_Meta_Box {
 	}
 
 	// Save data from metabox
-	function save( $post_id)  {
-
+	function save( $postobj)  {
+		$post_id = is_int($postobj) ? $postobj : $postobj->ID;
+		
 		// verify nonce
 		if ( ! isset( $_POST['wp_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['wp_meta_box_nonce'], basename(__FILE__) ) ) {
 			return $post_id;
