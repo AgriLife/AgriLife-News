@@ -509,17 +509,6 @@ update_user_meta( $user_id, 'phone', $_POST['phone'] );
 add_filter( 'cmb_meta_boxes', 'for_media_metaboxes' );
 
 /**
- * Add content fragment for Subscribe2 email templates
- */
-function subscribe2_credits_keyword($string) {
-	global $post;
-	$meta = get_post_meta($post->ID);
-
-	return str_replace('{CREDITS}', $meta['cmb_media_info'][0], $string);
-}
-add_filter('s2_custom_keywords', 'subscribe2_credits_keyword');
-
-/**
  * Define the metabox and field configurations.
  *
  * @param  array $meta_boxes
@@ -655,3 +644,26 @@ function today_undo_embed($formats) {
 	$formats = array();
 	return $formats;
 }
+
+// Increase excerpt length so we can remove unneeded text
+function custom_excerpt_length( $length ) {
+	return 200;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Remove every character before the capitalized city name from the excerpt
+function agrilifenews_remove_post_credits( $output ) {
+  $content = strip_shortcodes( get_the_content() );
+	$pattern = '/^(?:<[^>]+>|\W|&nbsp;|\b)*([A-Z]{2,}|[A-Z][a-z][A-Z]{2,})([\w\W]*)/m';
+	preg_match($pattern, $content, $portions);
+	if(sizeof($portions) > 1){
+		// Pattern matched
+		$excerpt = $portions[1] . $portions[2];
+	} else {
+		// Probably not a news-related post
+		$excerpt = $output;
+	}
+	// return $excerpt;
+  return wp_trim_words( $excerpt, 55, ' […]' );
+}
+add_filter( 'get_the_excerpt', 'agrilifenews_remove_post_credits' );
