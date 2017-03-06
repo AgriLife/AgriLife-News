@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage flexopotamus
- * 
+ *
  */
 class flexopotamus_Ephemera_Widget extends WP_Widget {
 
@@ -15,7 +15,7 @@ class flexopotamus_Ephemera_Widget extends WP_Widget {
 	 *
 	 * @return void
 	 **/
-	function flexopotamus_Ephemera_Widget() {
+	function __construct() {
 		$widget_ops = array( 'classname' => 'widget_flexopotamus_ephemera', 'description' => __( 'Use this widget to list your recent Aside, Status, Quote, and Link posts', 'flexopotamus' ) );
 		$this->WP_Widget( 'widget_flexopotamus_ephemera', __( 'flexopotamus Ephemera', 'flexopotamus' ), $widget_ops );
 		$this->alt_option_name = 'widget_flexopotamus_ephemera';
