@@ -8,6 +8,7 @@
 $catNameId = get_query_var('cat');
 $catName = single_cat_title("", false);
 $catSlug = get_category($catNameId);
+$catTitleEl = is_home() ? 'h2' : 'div';
 get_header(); ?>
 		<section class="featured-content clearfix">
 			<header class="featured-content-header">
@@ -20,9 +21,9 @@ get_header(); ?>
 			<div id="feature-container">
 	             <img id="loading" src="<?php bloginfo('stylesheet_directory'); ?>/images/ajax-loader.gif" />
 			</div>
-			<div class="one-of-3 clearfix featured-stories-container"> 
-			<ol class="featured-stories"> 
-			<?php 
+			<div class="one-of-3 clearfix featured-stories-container">
+			<ol class="featured-stories">
+			<?php
 			global $post, $do_not_duplicate;
 			$do_not_duplicate = array(); // set befor loop variable as array
 			$my_query = new WP_Query('meta_key=feature-homepage&meta_value=1&posts_per_page=3&cat='.$catNameId);
@@ -37,19 +38,19 @@ get_header(); ?>
 					<a href="<?php the_permalink();?>" id="l<?php echo $count;?>" class="mb-link">
 						<?php
 						if ( has_post_thumbnail() ) {
-			  				the_post_thumbnail('feature-thumb'); 
-						} else  { 
-							echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" title="AgriLife" />'; 
-				}	?>	
-						<h2 class="mb-post-title cat-post-title"><?php the_title(); ?></h2>
+			  				the_post_thumbnail('feature-thumb');
+						} else  {
+							echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" title="AgriLife" />';
+				}	?>
+						<<?php echo $catTitleEl; ?> class="mb-post-title cat-post-title"><?php the_title(); ?></<?php echo $catTitleEl; ?>>
 					</a>
-				</div>				
-			</li>				
-																			
-			<?php endwhile;  wp_reset_query(); ?>					
+				</div>
+			</li>
+
+			<?php endwhile;  wp_reset_query(); ?>
 		</ol>
 	</div>
-		</section> 
+		</section>
 
 <div class="content-wrap">
 	<section id="content" role="main" class="two-of-3 column">
@@ -98,7 +99,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

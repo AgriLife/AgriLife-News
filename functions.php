@@ -365,7 +365,8 @@ function cat_loop( $catClass ) {
 		'post__not_in' => $do_not_duplicate
 		    )
 	);
- 		while ($cat_query->have_posts()) : $cat_query->the_post();
+	$catTitleEl = is_home() ? 'h2' : 'div';
+		while ($cat_query->have_posts()) : $cat_query->the_post();
  		$do_not_duplicate[] = $post->ID; update_post_caches($posts);
  		?>
 		<a class="mb-link cat-nav-post-link clearfix" href="<?php the_permalink();?>">
@@ -375,7 +376,7 @@ function cat_loop( $catClass ) {
 					} else  {
 						echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" class="attachment-feature-thumb wp-post-image" title="AgriLife" />';
 			}	?>
-			<h2 class="mb-post-title cat-post-title"><?php the_title(); ?></h2>
+			<<?php echo $catTitleEl; ?> class="mb-post-title cat-post-title"><?php the_title(); ?></<?php echo $catTitleEl; ?>>
 		</a>
 		<?php endwhile;  wp_reset_query();
 	return true;

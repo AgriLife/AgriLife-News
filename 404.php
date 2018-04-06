@@ -22,7 +22,7 @@ get_header(); ?>
 					<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
 
 					<div class="widget">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'flexopotamus' ); ?></h2>
+						<div class="widgettitle"><?php _e( 'Most Used Categories', 'flexopotamus' ); ?></div>
 						<ul>
 						<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
 						</ul>
@@ -43,7 +43,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

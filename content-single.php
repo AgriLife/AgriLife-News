@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage flexopotamus
- * 
+ *
  */
 ?>
 
@@ -16,24 +16,24 @@
 		<div class="entry-meta">
 			<?php flexopotamus_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>	
+		<?php endif; ?>
 		<?php $media_info = get_post_meta( $post->ID,'cmb_media_info', TRUE ); ?>
-		<?php if ($media_info): ?>			
-		<div class="for-media-wrap entry-meta">			
+		<?php if ($media_info): ?>
+		<div class="for-media-wrap entry-meta">
 		<!-- <button id="media-info-button">Contacts</button>-->
-		<div class="for-media entry-meta">				
+		<div class="for-media entry-meta">
 				<?php echo $media_info; ?>
-		</div><!-- .for-media -->						
-		</div><!-- .for-media-wrap -->				
+		</div><!-- .for-media -->
+		</div><!-- .for-media-wrap -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'flexopotamus' ) . '</span>', 'after' => '</div>' ) ); ?>
-		
+
 		<?php echo do_shortcode('[jprel]'); ?>
-		
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -52,8 +52,8 @@
 					</a>
 				</div><!-- #author-link	-->
 			</div><!-- #author-description -->
-		</div><!-- #entry-author-info -->		
-		
+		</div><!-- #entry-author-info -->
+
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'flexopotamus' ) );
