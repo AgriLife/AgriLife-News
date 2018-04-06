@@ -2,7 +2,7 @@
 /**
  * @package WordPress
  * @subpackage flexopotamus
- * 
+ *
  */
 
 define('MY_WORDPRESS_FOLDER',$_SERVER['DOCUMENT_ROOT']);
@@ -38,7 +38,7 @@ if ( ! function_exists( 'flexopotamus_setup' ) ):
  * @since flexopotamus 1.0
  */
 function flexopotamus_setup() {
-	
+
 	// Grab flexopotamus's custom meta featured post fields functionality.
 	require( dirname( __FILE__ ) . '/inc/custom-meta.php' );
 
@@ -50,38 +50,38 @@ function flexopotamus_setup() {
 
 	// This theme uses Featured Images (also known as post thumbnails)
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'feature-large', 680, 376, true );	
+	add_image_size( 'feature-large', 680, 376, true );
 	add_image_size( 'feature-thumb', 86, 86, true );
-	
+
 
 	function load_js() {
 	        // instruction to only load if it is not the admin area
 		if ( !is_admin() ) {
-			 
-		// deregister swfobject js							
+
+		// deregister swfobject js
 		wp_deregister_script('swfobject');
-				
-		// deregister l10n js			
-		wp_deregister_script( 'l10n' );	
-			
-		// register jquery CDN				
+
+		// deregister l10n js
+		wp_deregister_script( 'l10n' );
+
+		// register jquery CDN
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), true);		
+		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), true);
 	   	wp_enqueue_script('jquery');
-	
+
 		// Add Modernizr to theme. Custom build detects video, audio, flexbox, touch events and adds respond.js for media queries support in older browsers.
 	   	wp_enqueue_script('modernizr',
 	       	get_bloginfo('template_directory') . '/js/modernizr.js' , array('jquery'), '2.0.6', false);
-							
+
 	       // enqueue your compressed js in one file and add to bottom of document
 	   	wp_enqueue_script('my_scripts',
 	       	get_bloginfo('template_directory') . '/js/my_scripts.js', array('jquery'), '1.0', true);
-	       
-		       
-		}	         
-	}    
+
+
+		}
+	}
 	add_action('init', 'load_js');
-	
+
 }
 endif; // flexopotamus_setup
 
@@ -127,8 +127,8 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
 	) );
 
 	register_sidebar( array(
@@ -137,8 +137,8 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
 	) );
 
 	register_sidebar( array(
@@ -147,8 +147,8 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3 last"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
 	) );
 	register_sidebar( array(
 		'name' => __( 'Footer Area Four', 'flexopotamus' ),
@@ -156,8 +156,8 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
 	) );
 
 	register_sidebar( array(
@@ -166,8 +166,8 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
 	) );
 
 	register_sidebar( array(
@@ -176,10 +176,10 @@ function flexopotamus_widgets_init() {
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3 last"><div class="footer-info-wrap">',
 		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );	
-	
+		'before_title' => '<div class="footer-info-title widget-title-remove">',
+		'after_title' => '</div>'
+	) );
+
 }
 add_action( 'widgets_init', 'flexopotamus_widgets_init' );
 
@@ -329,7 +329,7 @@ function flexopotamus_posted_on() {
 		sprintf( esc_attr__( 'View all posts by %s', 'flexopotamus' ), get_the_author() ),
 		esc_html( get_the_author() ),
 		esc_html( get_the_author_meta( 'user_email' ) ),
-		esc_html( get_the_author_meta( 'phone' ) )			
+		esc_html( get_the_author_meta( 'phone' ) )
 	);
 }
 endif;
@@ -356,7 +356,7 @@ add_filter( 'body_class', 'flexopotamus_body_classes' );
  */
 function cat_loop( $catClass ) {
 	global $post, $do_not_duplicate;
-	$cat_query = new WP_Query( 
+	$cat_query = new WP_Query(
 	array(
 		'meta_key' =>  'feature-homepage',
 		'meta_value' => 1,
@@ -368,12 +368,12 @@ function cat_loop( $catClass ) {
  		while ($cat_query->have_posts()) : $cat_query->the_post();
  		$do_not_duplicate[] = $post->ID; update_post_caches($posts);
  		?>
-		<a class="mb-link cat-nav-post-link clearfix" href="<?php the_permalink();?>">				
+		<a class="mb-link cat-nav-post-link clearfix" href="<?php the_permalink();?>">
 			<?php
 					if ( has_post_thumbnail() ) {
-		  				the_post_thumbnail('feature-thumb'); 
-					} else  { 
-						echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" class="attachment-feature-thumb wp-post-image" title="AgriLife" />'; 
+		  				the_post_thumbnail('feature-thumb');
+					} else  {
+						echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" class="attachment-feature-thumb wp-post-image" title="AgriLife" />';
 			}	?>
 			<h2 class="mb-post-title cat-post-title"><?php the_title(); ?></h2>
 		</a>
@@ -421,7 +421,7 @@ function create_agency_taxonomy() {
           'update_item' => __( 'Update Agency Category' ),
           'add_new_item' => __( 'Add New Agency Category' ),
           'new_item_name' => __( 'New Agency Category Name' ),
-     );     
+     );
 
      register_taxonomy( 'agency_category', array( 'post' ), array(
           'hierarchical' => true,
@@ -451,7 +451,7 @@ function create_region_taxonomy() {
           'update_item' => __( 'Update Region Category' ),
           'add_new_item' => __( 'Add New Region Category' ),
           'new_item_name' => __( 'New Agency Region Name' ),
-     );     
+     );
 
      register_taxonomy( 'region_category', array( 'post' ), array(
           'hierarchical' => true,
@@ -481,10 +481,10 @@ function custom_taxonomy_dropdown($taxonomy, $orderby, $order, $limit, $name, $s
 
 add_action( 'show_user_profile', 'extra_user_profile_fields' );
 add_action( 'edit_user_profile', 'extra_user_profile_fields' );
- 
+
 function extra_user_profile_fields( $user ) { ?>
 <h3><?php _e("Extra profile information", "blank"); ?></h3>
- 
+
 <table class="form-table">
 <tr>
 <th><label for="phone"><?php _e("Phone"); ?></label></th>
@@ -495,14 +495,14 @@ function extra_user_profile_fields( $user ) { ?>
 </tr>
 </table>
 <?php }
- 
+
 add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
- 
+
 function save_extra_user_profile_fields( $user_id ) {
- 
+
 if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
- 
+
 update_user_meta( $user_id, 'phone', $_POST['phone'] );
 }
 

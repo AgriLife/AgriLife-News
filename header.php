@@ -69,7 +69,7 @@
 	wp_head();
 ?>
 	<!-- Hook up FitVids-->
-	<script type="text/javascript">	
+	<script type="text/javascript">
 		$(window).load(function() {
 			$(".footer-info-container,.entry-content").fitVids();
 		});
@@ -81,16 +81,16 @@
 	<div id="drop-section-nav">
 		<div id="drop-nav" class="wrap">
 			<ul class="drop-nav-list">
-				<li class="top-agency agrilife"><a href="http://agrilife.org/">Texas A&amp;M AgriLife</a></li>
+				<li class="top-agency agrilife"><a href="https://agrilife.org/">Texas A&amp;M AgriLife</a></li>
 				<li class="menu-button"><a href="#sidebar">Menu</a></li>
 			</ul>
 		</div>
 	</div>
-	
+
 	<div class="wrap clearfix">
 	<header>
-		<h1 class="site-title one-of-3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>AgriLife Today</span><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" alt="AgriLife Today Logo" title="AgriLife Today Logo" /></a></h1>
-		<nav id="primary"><a class="home" href="<?php echo site_url(); ?>">Home</a><?php 
+		<div class="site-title one-of-3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>AgriLife Today</span><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" alt="AgriLife Today Logo" title="AgriLife Today Logo" /></a></div>
+		<nav id="primary"><a class="home" href="<?php echo site_url(); ?>">Home</a><?php
 			// Get the ID of a given category
 			$categories = array( 'farm-ranch', 'lawn-garden', 'life-health', 'environment', 'business', 'science-and-technology' );
 			foreach($categories as $cat){
