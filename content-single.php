@@ -17,15 +17,6 @@
 			<?php flexopotamus_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-		<?php $media_info = get_post_meta( $post->ID,'cmb_media_info', TRUE ); ?>
-		<?php if ($media_info): ?>
-		<div class="for-media-wrap entry-meta">
-		<!-- <button id="media-info-button">Contacts</button>-->
-		<div class="for-media entry-meta">
-				<?php echo $media_info; ?>
-		</div><!-- .for-media -->
-		</div><!-- .for-media-wrap -->
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -37,6 +28,15 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
+		<?php $media_info = get_post_meta( $post->ID,'cmb_media_info', TRUE ); ?>
+		<?php if ($media_info): ?>
+		<div class="for-media-wrap entry-meta">
+		<!-- <button id="media-info-button">Contacts</button>-->
+		<div class="for-media entry-meta">
+				<?php echo $media_info; ?>
+		</div><!-- .for-media -->
+		</div><!-- .for-media-wrap -->
+		<?php endif; ?>
 
 		<div id="author-info">
 			<div id="author-avatar">
