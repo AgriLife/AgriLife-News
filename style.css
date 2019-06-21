@@ -1267,3 +1267,7 @@ nav#primary {
 .simple-social-icons ul li.social-youtube a:hover {
 	background-color: #9A1818!important;
 }
+
+.wp-caption {
+	max-width: 100%;
+}
